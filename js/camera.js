@@ -18,7 +18,7 @@ function openCamera() {
       : null);
   var constraints = {
     audio: false,
-    video: { facingMode: "environment", width: 1280, height: 720 },
+    video: { facingMode: "environment" },
   };
   navigator.mediaDevices
     .getUserMedia(constraints)
