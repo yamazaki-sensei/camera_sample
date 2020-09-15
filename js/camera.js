@@ -17,6 +17,7 @@ function openCamera() {
         }
       : null);
   var constraints = {
+    audio: false,
     video: { facingMode: "environment", width: 1280, height: 720 },
   };
   navigator.mediaDevices
