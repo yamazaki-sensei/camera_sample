@@ -22,6 +22,9 @@ function openCamera() {
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then(function (stream) {
+      stream.getVideoTracks().forEach((t) => {
+        window.alert(t.getCapabilities());
+      });
       video.srcObject = stream;
       video.onloadedmetadata = function (e) {
         video.play();
